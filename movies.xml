@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Movies>
+    <Movie>
+        <id>1453959382</id>
+        <name>1</name>
+        <coordinates>
+            <x>1</x>
+            <y>11.0</y>
+        </coordinates>
+        <creationDate>2025-02-27</creationDate>
+        <oscarsCount>1</oscarsCount>
+        <goldenPalmCount>1</goldenPalmCount>
+        <totalBoxOffice>1</totalBoxOffice>
+        <genre>DRAMA</genre>
+        <screenwriter>
+            <name>1</name>
+            <weight>1.0</weight>
+        </screenwriter>
+    </Movie>
+    <Movie>
+        <id>hehe</id>
+        <name>gklgf</name>
+        <coordinates>
+            <x>uhh</x>
+            <y>idk</y>
+        </coordinates>
+        <creationDate>bout 2 months ago idk</creationDate>
+        <oscarsCount>who is oscar?</oscarsCount>
+        <goldenPalmCount>didn't know they existed</goldenPalmCount>
+        <totalBoxOffice>'bout tree fiddy</totalBoxOffice>
+        <genre>funny</genre>
+        <screenwriter>
+            <name>jkhg</name>
+            <birthday>i unno</birthday>
+            <weight>obese</weight>
+            <passportID>kglfgf</passportID>
+            <location>
+                <x>here</x>
+                <y>there</y>
+                <z>at the square</z>
+            </location>
+        </screenwriter>
+    </Movie>
+    <Movie>
+        <id>937331342</id>
+        <name>klgf</name>
+        <coordinates>
+            <x>23</x>
+            <y>23.0</y>
+        </coordinates>
+        <creationDate>2025-02-27</creationDate>
+        <oscarsCount>-32</oscarsCount>
+        <totalBoxOffice>32</totalBoxOffice>
+        <screenwriter>
+            <name>gf</name>
+            <birthday>2000-01-10</birthday>
+            <weight>34.0</weight>
+            <passportID>43gfdgsf</passportID>
+        </screenwriter>
+    </Movie>
+</Movies>

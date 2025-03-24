@@ -1,0 +1,90 @@
+-----------------------------
+- Base requirements for the program:
+1. The class whose instance collection is managed by the program must implement sorting by default.
+2. All requirements for class fields (specified as comments) must be met.
+3. A collection of type java.util.ArrayDequeue must be used for storage
+4. The collection must be automatically populated with values from a file when the application is started.
+5. The name of the file should be passed to the program using: command line argument.
+6. Data should be stored in a file in xml format
+7. Reading data from the file should be implemented using the java.io.BufferedInputStream class
+8. Writing data to a file should be implemented using the java.io.PrintWriter class.
+9. All classes in the program must be documented in javadoc format.
+10. The program should work correctly with incorrect data (user input errors, lack of access rights to the file, etc.).
+
+----------------------------
+- Commands requirements for the program:
+-help : display help for available commands
+-info : display information about the collection (type, initialization date, number of items, etc.) in the standard output stream.
+-show : display all the elements of the collection in a string representation in the standard output stream.
+-add {element} : add a new element to the collection
+-update id {element} : update the value of the element in the collection whose id is equal to the given one.
+-remove_by_id id : remove an element from the collection by its id
+-clear : clear the collection
+-save : save the collection to a file
+execute_script file_name : read and execuupte a script from the specified file. The script contains commands in the same form as the user enters them in interactive mode.
+-exit : end the program (without saving to a file).
+-remove_head : display the first element of the collection and remove it.
+-add_if_min {element} : add a new element to the collection if its value is less than the smallest element in the collection.
+-remove_lower {element} : remove all elements smaller than the given element from the collection
+-count_by_genre genre : print the number of elements whose genre field value is equal to the given one
+-count_less_than_oscars_count oscarsCount : print the number of elements whose oscarsCount field value is less than the given one.
+-filter_contains_name name : display the items whose name field value contains the given substring.
+
+----------------------------
+- I/O requirements for the program:
+1. All command arguments that are standard data types (primitive types, shell classes, String, classes for storing dates) must be entered on the same line as the command name.
+2. All compound data types (objects of classes stored in a collection) must be entered one field per line.
+3. When entering composite data types, the user should be shown an input prompt containing the field name (e.g., “Enter date of birth:”)
+4. If the field is an enum, the name of one of its constants should be entered (the list of constants should be displayed beforehand).
+5. In case of incorrect user input (a string is entered that is not the name of a constant in the enum; a string is entered instead of a number; the entered number is not within the specified limits, etc.), an error message should be displayed and the user should be asked to repeat the field input.
+6. To enter null values use an empty string.
+7. Fields with the comment “The value of this field should be generated automatically” should not be entered manually by the user when adding them.
+
+----------------------------
+- models to add and their requirements:
+
+public class Movie {
+    private Long id; //Поле не может быть null, Значение поля должно быть больше 0, Значение этого поля должно быть уникальным, Значение этого поля должно генерироваться автоматически
+    private String name; //Поле не может быть null, Строка не может быть пустой
+    private Coordinates coordinates; //Поле не может быть null
+    private java.time.LocalDateTime creationDate; //Поле не может быть null, Значение этого поля должно генерироваться автоматически
+    private long oscarsCount; //Значение поля должно быть больше 0
+-   private Integer goldenPalmCount; //Значение поля должно быть больше 0, Поле может быть null
+    private int totalBoxOffice; //Значение поля должно быть больше 0
+-   private MovieGenre genre; //Поле может быть null
+    private Person screenwriter;
+}
+
+public class Coordinates {
+    private Integer x; //Значение поля должно быть больше -500, Поле не может быть null
+    private Float y; //Поле не может быть null
+}
+
+public class Person {
+    private String name; //Поле не может быть null, Строка не может быть пустой
+    private java.time.ZonedDateTime birthday; //Поле не может быть null
+    private double weight; //Значение поля должно быть больше 0
+-   private String passportID; //Длина строки должна быть не меньше 4, Значение этого поля должно быть уникальным, Поле может быть null
+-   private Location location; //Поле может быть null
+}
+
+public class Location {
+    private Float x; //Поле не может быть null
+    private float y;
+    private float z;
+}
+
+public enum MovieGenre {
+    WESTERN,
+    DRAMA,
+    COMEDY,
+    MUSICAL,
+    ADVENTURE;
+}
+
+- fix requirements:
+1. CTRL+C ignored
+2. No silent commands
+3. File import validations
+4. Update command allows to skip fields that dont need to be changed
+5. Recursion check for execute_script

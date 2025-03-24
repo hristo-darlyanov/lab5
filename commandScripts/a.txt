@@ -1,0 +1,7 @@
+show
+info
+remove_by_id     30
+
+execute_script a.txt
+
+add
