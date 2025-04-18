@@ -1,1 +1,28 @@
-Классы-оболочки - Wrapper classes (Integer -> int; Double -> double)
+Comparable<"Class"> -> compareTo("Class" item)
+Comparator<"Class"> -> compare("Class" firstItem, "Class" secondItem)
+
+List ( array like ) -> ArrayList, LinkedList
+Set ( unique array like ) -> HashSet, TreeSet
+Map ( dictionary ) -> HashMap, LinkedHashMap, TreeMap
+Queue -> ArrayDeque
+
+ArrayDeque -> double ended Queue
+
+class Box<T> -> generic class with type parameters
+Wildcard <?> -> any type
+
+int -> Integer ( wrapper for int )
+double -> Double 
+boolean -> Boolean
+
+Byte streams ( InputStream, OutputStream ) -> used for reading data like images and files
+Character streams (Writer, Reader) -> for text data
+Stream chains -> combines multiple streams for efficiency
+
+File -> represents a file or a directory. Provides helping functions to work with files
+
+java.nio -> new input output
+Path – represents a file or directory path.
+Files – utility class for file operations.
+ByteBuffer – buffer for byte data.
+Channels – handles file channels, socket channels, etc.

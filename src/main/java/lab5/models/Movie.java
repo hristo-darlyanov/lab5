@@ -1,9 +1,9 @@
 package lab5.models;
 
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 import java.time.LocalDate;
 import java.util.Random;
@@ -206,6 +206,7 @@ public class Movie implements Comparable<Movie> {
      */
     public static void validateMovie(Movie movie) {
         if (movie == null) {
+            System.out.println("Movie cannot be null.");
             return;
         }
         // Validate id: must not be null and > 0, otherwise generate a new one.

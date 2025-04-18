@@ -14,30 +14,29 @@
         <genre>DRAMA</genre>
         <screenwriter>
             <name>1</name>
+            <birthday>2025-04-18</birthday>
             <weight>1.0</weight>
         </screenwriter>
     </Movie>
     <Movie>
-        <id>hehe</id>
+        <id>1040426424</id>
         <name>gklgf</name>
         <coordinates>
-            <x>uhh</x>
-            <y>idk</y>
+            <x>0</x>
+            <y>0.0</y>
         </coordinates>
-        <creationDate>bout 2 months ago idk</creationDate>
-        <oscarsCount>who is oscar?</oscarsCount>
-        <goldenPalmCount>didn't know they existed</goldenPalmCount>
-        <totalBoxOffice>'bout tree fiddy</totalBoxOffice>
-        <genre>funny</genre>
+        <creationDate>2025-04-18</creationDate>
+        <oscarsCount>1</oscarsCount>
+        <totalBoxOffice>1</totalBoxOffice>
         <screenwriter>
             <name>jkhg</name>
-            <birthday>i unno</birthday>
-            <weight>obese</weight>
+            <birthday>2025-04-18</birthday>
+            <weight>1.0</weight>
             <passportID>kglfgf</passportID>
             <location>
-                <x>here</x>
-                <y>there</y>
-                <z>at the square</z>
+                <x>0.0</x>
+                <y>0.0</y>
+                <z>0.0</z>
             </location>
         </screenwriter>
     </Movie>
@@ -49,13 +48,31 @@
             <y>23.0</y>
         </coordinates>
         <creationDate>2025-02-27</creationDate>
-        <oscarsCount>-32</oscarsCount>
+        <oscarsCount>1</oscarsCount>
         <totalBoxOffice>32</totalBoxOffice>
         <screenwriter>
             <name>gf</name>
             <birthday>2000-01-10</birthday>
             <weight>34.0</weight>
             <passportID>43gfdgsf</passportID>
+        </screenwriter>
+    </Movie>
+    <Movie>
+        <id>142996161</id>
+        <name>123</name>
+        <coordinates>
+            <x>12</x>
+            <y>3.0</y>
+        </coordinates>
+        <creationDate>2025-04-18</creationDate>
+        <oscarsCount>123</oscarsCount>
+        <goldenPalmCount>1</goldenPalmCount>
+        <totalBoxOffice>23</totalBoxOffice>
+        <screenwriter>
+            <name>WES1e</name>
+            <birthday>2024-12-12</birthday>
+            <weight>12.0</weight>
+            <passportID>1234</passportID>
         </screenwriter>
     </Movie>
 </Movies>

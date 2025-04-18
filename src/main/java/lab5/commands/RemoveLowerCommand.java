@@ -2,6 +2,7 @@ package lab5.commands;
 
 import lab5.managers.CollectionManager;
 import lab5.models.Movie;
+import lab5.utils.Validator;
 
 /**
  * Remove lower command
@@ -19,24 +20,9 @@ public class RemoveLowerCommand implements Command {
      */
     @Override
     public void execute(String argument) {
-        try {
-            Integer.parseInt(argument);
-        } catch (NumberFormatException e) {
-            System.out.println("Id must be an integer");
-            return;
-        }
+        int id = Validator.parseAndValidateInt(argument);
 
-        if (argument.isEmpty()) {
-            System.out.println("Id must be provided");
-            return;
-        }
-
-        int id = Integer.parseInt(argument);
-
-        if (collectionManager.getCollection().stream().noneMatch(movie -> movie.getId() == id)) {
-            System.out.println("There is no movie with such id");
-            return;
-        }
+        Validator.movieWithIdExists(collectionManager, argument);
 
         Movie selectedMovie = collectionManager.getCollection().stream().filter(movie -> movie.getId() == id).findFirst().get();
 

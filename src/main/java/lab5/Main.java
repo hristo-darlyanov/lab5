@@ -11,7 +11,7 @@ import lab5.utils.App;
  * registers commands, and starts the console application.
  */
 public class Main {
-    /** 
+    /**
      * @param args
      */
     public static void main(String[] args) {
@@ -22,7 +22,7 @@ public class Main {
             }
         });
 
-        args = new String[]{"movies.xml"};
+        args = new String[] { "movies.xml" };
         if (args.length < 1) {
             System.err.println("Please provide the file name as a command line argument.");
             System.exit(1);

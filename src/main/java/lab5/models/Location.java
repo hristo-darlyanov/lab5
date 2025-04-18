@@ -1,7 +1,7 @@
 package lab5.models;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 /**
  * Location class
@@ -75,6 +75,7 @@ public class Location {
      */
     public static void validateLocation(Location location) {
         if (location == null) {
+            System.out.println("Location cannot be null.");
             return;
         }
         // x must not be null.

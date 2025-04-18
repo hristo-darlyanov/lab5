@@ -31,7 +31,7 @@ public class CountLessThanOscarsCountCommand implements Command {
             return;
         }
 
-        if (oscarCount < 0) {
+        if (oscarCount <= 0) {
             System.out.println("Oscar count should be a positive number");
             return;
         }

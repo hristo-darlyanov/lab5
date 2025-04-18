@@ -25,7 +25,11 @@ public class App {
             String[] tokens = input.trim().split("\\s+", 2);
             String commandName = tokens[0];
             String args = tokens.length > 1 ? tokens[1] : "";
-            commandManager.execute(commandName, args);
+            try {
+                commandManager.execute(commandName, args);
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
+            }
             System.out.println();
         }
         System.out.print("Exiting application.");

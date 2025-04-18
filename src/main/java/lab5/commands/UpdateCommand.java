@@ -3,6 +3,7 @@ package lab5.commands;
 import lab5.forms.UpdateForm;
 import lab5.managers.CollectionManager;
 import lab5.models.Movie;
+import lab5.utils.Validator;
 
 /**
  * Update command
@@ -20,24 +21,10 @@ public class UpdateCommand implements Command {
      */
     @Override
     public void execute(String argument) {
-        try {
-            Integer.parseInt(argument);
-        } catch (NumberFormatException e) {
-            System.out.println("Id must be an integer");
-            return;
-        }
-
-        if (argument.isEmpty()) {
-            System.out.println("Id must be provided");
-            return;
-        }
+        int id = Validator.parseAndValidateInt(argument);
         
-        int id = Integer.parseInt(argument);
+        Validator.movieWithIdExists(collectionManager, argument);
         
-        if (collectionManager.getCollection().stream().noneMatch(movie -> movie.getId() == id)) {
-            System.out.println("There is no movie with such id");
-            return;
-        }
         Movie movie = collectionManager.getCollection().stream().filter(m -> m.getId() == id).findFirst().get();
         movie = UpdateForm.update(movie);
         movie.setId((long) id);

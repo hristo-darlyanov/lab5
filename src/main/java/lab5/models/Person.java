@@ -1,9 +1,9 @@
 package lab5.models;
 
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
-import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 
 import java.time.LocalDate;
 
@@ -118,6 +118,7 @@ public class Person {
      */
     public static void validatePerson(Person person) {
         if (person == null) {
+            System.out.println("Person cannot be null.");
             return;
         }
         // Validate name: non-null and non-empty.

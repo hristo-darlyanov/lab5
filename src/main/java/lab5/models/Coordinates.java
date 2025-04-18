@@ -1,8 +1,8 @@
 package lab5.models;
 
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import jakarta.xml.bind.annotation.XmlRootElement;
+import jakarta.xml.bind.annotation.XmlElement;
+import jakarta.xml.bind.annotation.XmlType;
 
 /**
  * Coordinates class
@@ -61,6 +61,7 @@ public class Coordinates {
      */
     public static void validateCoordinates(Coordinates coordinates) {
         if (coordinates == null) {
+            System.out.println("Coordinates cannot be null.");
             return;
         }
         // x: cannot be null and must be greater than -500.

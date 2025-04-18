@@ -1,6 +1,7 @@
 package lab5.commands;
 
 import lab5.managers.CollectionManager;
+import lab5.utils.Validator;
 
 /**
  * RemoveById command
@@ -18,24 +19,9 @@ public class RemoveById implements Command {
      */
     @Override
     public void execute(String argument) {
-        try {
-            Integer.parseInt(argument);
-        } catch (NumberFormatException e) {
-            System.out.println("Id must be an integer");
-            return;
-        }
+        int id = Validator.parseAndValidateInt(argument);
 
-        if (argument.isEmpty()) {
-            System.out.println("Id must be provided");
-            return;
-        }
-
-        int id = Integer.parseInt(argument);
-
-        if (collectionManager.getCollection().stream().noneMatch(movie -> movie.getId() == id)) {
-            System.out.println("There is no movie with such id");
-            return;
-        }
+        Validator.movieWithIdExists(collectionManager, argument);
         
         collectionManager.getCollection().removeIf(m -> m.getId() == id);
         System.out.println("Movie removed from the collection");

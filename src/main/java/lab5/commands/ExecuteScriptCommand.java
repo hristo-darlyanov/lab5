@@ -29,6 +29,7 @@ public class ExecuteScriptCommand implements Command {
  
         Map<String, String> commands = FileManager.loadCommandScript(argument);
         if (commands == null) {
+            System.out.println("File not found or empty. Please check the file name and try again.");
             return;
         }
 
